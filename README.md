@@ -1,8 +1,8 @@
-chaplinplayground
+chaplinbootstrap
 =================
 
-just a repo where i try my things out before using it in real projects
-
+just bootstrap for usual chaplin apps, written in coffeescript using
+standard libs. this also includes test-harnish for mocha
 
 # Introduction
 I've tried to keep the development process as simple as possible. Thats why no processing or build step is needed to edit the
@@ -18,7 +18,7 @@ You will need the following components installed:
  * bower (`npm install -g bower`)
 
 ```
-git clone git@github.com:marsch/chaplinplayground.git
+git clone git@github.com:marsch/chaplinbootstrap.git
 cd chaplinplayground
 npm install
 grunt prepare
