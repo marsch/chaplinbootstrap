@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="assets/mocha.js"></script>
+
+    <script>mocha.setup('bdd')</script>
+    <script src="assets/chai.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="assets/expect.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/sinon.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/sinon-expect-0.2.0.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript" charset="utf-8">
+      var should = chai.should();
+      var expect = SinonExpect.enhance(expect, sinon, 'was');
+    </script>
+
+
+
+
+    <!-- include the final source file -->
+    <script src="../js/vendor/requirejs/require.js"></script>
+    <script>
+
+        requirejs.config({
+          baseUrl: '../js',
+          paths: {
+              depend: 'lib/require-depend',
+              text: 'vendor/requirehogan/text',
+              hgn: 'vendor/requirehogan/hgn',
+              cs: 'vendor/requirecs/cs',
+              css: 'vendor/requirecss/css',
+              less: 'vendor/requireless/less',
+              lessc: 'vendor/requireless/lessc',
+              'lessc-server': 'vendor/requireless/lessc-server',
+              'less-builder': 'vendor/requireless/less-builder',
+              'css/css-builder': 'vendor/requirecss/css-builder',
+              'css/normalize': 'vendor/requirecss/normalize',
+              normalize: 'vendor/requirecss/normalize',
+              'coffee-script': 'vendor/requirecs/coffee-script',
+              hogan: 'vendor/requirehogan/hogan',
+              chaplin: 'vendor/chaplin/chaplin',
+              underscore: 'vendor/underscore/underscore',
+              jquery: 'vendor/jquery/jquery',
+              backbone: 'vendor/backbone/backbone',
+              loglevel: 'vendor/loglevel/loglevel',
+
+              // jquery plugins
+              'bootstrap.modal': 'vendor/bootstrap/bootstrap-modal',
+              'bootstrap.collapse': 'vendor/bootstrap/bootstrap-collapse',
+              'bootstrap.dropdown': 'vendor/bootstrap/bootstrap-dropdown'
+
+
+
+          },
+          shim: {
+              backbone: {
+                  deps: ['underscore', 'jquery'],
+                  exports: 'Backbone'
+              },
+              underscore: {
+                  exports: '_'
+              },
+              'backbone.stickit': {
+                  deps: ['backbone']
+              },
+              'bootstrap.modal': {
+                  deps: ['jquery']
+              },
+              'bootstrap.collapse': {
+                  deps: ['jquery']
+              },
+              'bootstrap.dropdown': {
+                  deps: ['jquery']
+              },
+          }
+        });
+
+    </script>
+
+
+
+    <script src="assets/blanket-qunit.js"
+      data-cover-only="['../js/models','../js/views','../js/controllers']" data-cover-loader="assets/blanket_cs.js"></script>
+    <script src="assets/mocha-blanket.js"></script>
+
+    <script>
+      require([
+        'cs!../test/specs/simpleTest'
+      ], function () {
+        if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+            mocha.run();
+        }
+      });
+
+    </script>
+
+    <script>document.write('<script src="http://'
+     + ('localhost').split(':')[0]
+     + ':35729/livereload.js?snipver=1"><\/script>')
+    </script>
+  </body>
+</html>
+

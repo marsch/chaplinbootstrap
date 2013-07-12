@@ -1,0 +1,11 @@
+.sass-cache
+
+# Directory that NPM stores downloaded components.
+/node_modules
+
+# Temporary directory where files are built.
+/src/js/vendor
+/src/css/vendor
+/src/images/vendor
+/components
+/build

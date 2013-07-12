@@ -1,0 +1,65 @@
+{
+  "name": "gocourse-domainadmin",
+  "version": "0.0.1",
+  "dependencies": {
+
+    "jquery": "1.10.x",
+    "underscore": "1.4.x",
+    "backbone": "1.0.x",
+    "requirejs": "2.1.x",
+    "chaplin": "0.9.x",
+    "bootstrap": "2.3.x",
+    "requirehogan": "git://github.com/millermedeiros/requirejs-hogan-plugin.git",
+    "requirecs": "git://github.com/jrburke/require-cs.git",
+    "requirecss": "https://github.com/guybedford/require-css.git",
+    "requireless": "https://github.com/guybedford/require-less.git",
+    "loglevel": "git://github.com/pimterry/loglevel.git",
+    "backbone.stickit": "https://github.com/NYTimes/backbone.stickit.git"
+
+
+  },
+  "exportsOverride": {
+    "jquery": {
+      "js/vendor": "jquery.js"
+    },
+    "backbone": {
+      "js/vendor": "backbone.js"
+    },
+    "requirejs": {
+      "js/vendor": "require.js"
+    },
+    "underscore": {
+      "js/vendor": "underscore.js"
+    },
+    "chaplin": {
+      "js/vendor": "amd/chaplin.js"
+    },
+    "bootstrap": {
+      "css/vendor": "less/**/*.less",
+      "images/vendor": "img/glyphicons-*.png",
+      "js/vendor": "js/*.js"
+    },
+    "requirehogan": {
+      "js/vendor": "*.js"
+    },
+    "requirecs": {
+      "js/vendor": "*.js"
+    },
+    "requireless": {
+      "js/vendor": "*"
+    },
+    "requirecss": {
+      "js/vendor": "*"
+    },
+    "loglevel": {
+      "js/vendor": "lib/loglevel.js"
+    },
+    "backbone.stickit": {
+      "js/vendor": "backbone.stickit.js"
+    },
+    "coffee-script": {
+      "js/vendor": "*.js"
+    }
+  }
+}
+
