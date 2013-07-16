@@ -61,6 +61,16 @@ module.exports = (grunt) ->
           almond: true
           insertRequire: ['main']
           optimize: 'none'
+          
+          
+    mocha:
+      all:
+       src: [SRC_DIR + '/test/**/*TestRunner.html']
+        options:
+          mocha:
+            ignoreLeaks: true
+          reporter: 'Spec'
+          run: true
 
   grunt.renameTask('regarde', 'watch')
 
@@ -86,4 +96,9 @@ module.exports = (grunt) ->
     'prepare'
     'build'
     'server'
+  ]
+  
+  grunt.registerTask 'test', [
+    'prepare'
+    'mocha:all'  
   ]
