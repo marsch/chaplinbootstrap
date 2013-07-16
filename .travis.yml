@@ -7,4 +7,5 @@ before_script:
 
 
 script:
+  - grunt prepare
   - grunt test
