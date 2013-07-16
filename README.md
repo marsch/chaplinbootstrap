@@ -1,6 +1,8 @@
 chaplinbootstrap
 =================
 
+[![Build Status](https://travis-ci.org/marsch/chaplinbootstrap.png?branch=master)](https://travis-ci.org/marsch/chaplinbootstrap)
+
 just bootstrap for usual chaplin apps, written in coffeescript using
 standard libs. this also includes test-harnish for mocha
 
