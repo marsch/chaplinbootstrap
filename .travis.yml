@@ -1,0 +1,9 @@
+language: coffeescript
+
+before_script:
+  - npm install
+
+
+script:
+  - grunt prepare
+  - grunt test
